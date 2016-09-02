@@ -1,0 +1,29 @@
+# Factoid module for Sopel
+
+Sopel has a factoid module called Bucket, but apparently the code is
+disfavored.  Moreover, it implements a bot that seems designed for all
+kinds of silliness and not just serving up factoids.  While I have
+nothing against silliness, I'd really like a clean factoid bot that
+just does that one thing.
+
+## Grammar
+
+We're taking cues from
+[infobot](http://www.infobot.org/guide-0.43.x.html) on grammar.
+
+Set factoids: Abierto will respond to "X is Y" and "X are Y".
+
+Access factoids: "What is X?", "Where is X?", or "X?"  If there are
+too many answers, it will send privmsg.  If there's just a giant pile
+of them, it will tell you that.
+
+Alter factoids: Address the bot and use "Abierto: X =~ s/A/B/" and
+that will change all instances of A to B in the factoid.
+
+Append: "X is also Y" will add an answer to X's list of factoids.
+
+Delete factoid: "Abierto: forget X"
+
+Replace factoid: "Abierto: no, X is Y"  will replace the factoid with Y.
+
+
